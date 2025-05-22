@@ -1,0 +1,147 @@
+ /* HEADER WRAPPER */
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+ /* HEADER WRAPPER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 30px;
+}
+
+/* NAV CONTAINER */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  height: 40px;
+}
+
+/* LOGO AREA */
+.left img {
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* NAV LIST */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAV LINKS */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+/* REMOVE HOVER EFFECT */
+nav ul li a:hover {
+  background: none;
+  color: inherit;
+  padding: 5px 10px;
+}
+
+/* ACTIVE LINK */
+nav ul li a.active {
+  border-bottom: 3px solid #cf7660;
+  font-weight: bold;
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.left img {
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Nav links */
+.right ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+
+.right ul li a:hover {
+  color: red;
+}
+section {
+  scroll-margin-top: 100px; /* Adjust to match or slightly exceed your header height */
+}
+
+/* Hamburger style */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .right {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .right.show {
+    max-height: 370px; /* Adjust based on menu items */
+  }
+
+  .right ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .right ul li {
+    margin: 10px 0;
+  }
+}

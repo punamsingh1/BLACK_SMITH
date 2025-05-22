@@ -1,0 +1,118 @@
+.category-section {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.facility-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.facility-header h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #e6542e;
+}
+
+.product-intro {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  background-color: #f6fafd;
+  padding: 10px 0;
+}
+
+/* ✅ Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 per row on desktop */
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* ✅ Card Style */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Image */
+.product-img-only {
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* ✅ Text */
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0 10px;
+}
+
+.arrow-link {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.arrow-link:hover {
+  color: #0056b3;
+  transform: translateX(4px);
+}
+
+/* ✅ RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 cards per row on tablet */
+  }
+
+  .product-img-only {
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+
+  .facility-header h2,
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .arrow-link {
+    font-size: 14px;
+  }
+
+  .product-img-only {
+    height: 130px;
+  }
+}
